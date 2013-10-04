@@ -55,7 +55,8 @@ public class BukkitJobConfig extends JobConfig {
      * 
      * loads from Jobs/jobConfig.yml
      */
-    private void loadJobSettings(){
+    @SuppressWarnings("deprecation")
+	private void loadJobSettings(){
         File f = new File(plugin.getDataFolder(), "jobConfig.yml");
         ArrayList<Job> jobs = new ArrayList<Job>();
         Jobs.setJobs(jobs);

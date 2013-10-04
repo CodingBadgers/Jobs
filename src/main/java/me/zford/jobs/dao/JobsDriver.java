@@ -22,10 +22,15 @@ import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverPropertyInfo;
 import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
 import java.util.Properties;
+import java.util.logging.Logger;
+
+import org.bukkit.Bukkit;
 
 public class JobsDriver implements Driver {
     private Driver driver;
+    
     public JobsDriver(Driver driver) {
         this.driver = driver;
     }
@@ -59,4 +64,9 @@ public class JobsDriver implements Driver {
     public boolean jdbcCompliant() {
         return driver.jdbcCompliant();
     }
+
+	@Override
+	public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+		return Bukkit.getLogger();
+	}
 }

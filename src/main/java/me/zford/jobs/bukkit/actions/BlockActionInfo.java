@@ -23,8 +23,9 @@ import me.zford.jobs.container.ActionType;
 
 import org.bukkit.block.Block;
 
+@SuppressWarnings("deprecation")
 public class BlockActionInfo extends MaterialActionInfo implements ActionInfo {
-    public BlockActionInfo(Block block, ActionType type) {
+	public BlockActionInfo(Block block, ActionType type) {
         super(block.getType(), block.getData(), type);
     }
 }

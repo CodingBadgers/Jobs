@@ -23,6 +23,7 @@ import me.zford.jobs.container.ActionType;
 
 import org.bukkit.inventory.ItemStack;
 
+@SuppressWarnings("deprecation")
 public class ItemActionInfo extends MaterialActionInfo implements ActionInfo {
     public ItemActionInfo(ItemStack items, ActionType type) {
         super(items.getType(), items.getData().getData(), type);
